@@ -3,9 +3,10 @@
 Supported by IE8+ and good browsers.
 
 ``` js
-var elem = document.getElementById('id');
+var elem = document.querySelector('#my-elem');
 function onElemClick( event ) {
-  console.log( event.type + ' just happened' );
+  console.log( event.type + ' just happened on #' + event.target.id );
+  // -> click just happened on #my-elem
 }
 
 eventie.bind( elem, 'click', onElemClick );
@@ -23,4 +24,4 @@ bower install desandro/eventie
 
 ## IE 8
 
-eventie add support for `event.target` and [`.handleEvent` method](https://developer.mozilla.org/en-US/docs/DOM/EventListener#handleEvent()).
+eventie add support for `event.target` and [`.handleEvent` method](https://developer.mozilla.org/en-US/docs/DOM/EventListener#handleEvent(\)) for Internet Explorer 8.
