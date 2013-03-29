@@ -3,7 +3,7 @@
 Supported by IE8+ and good browsers.
 
 ``` js
-var elem = document.getElementById('#id');
+var elem = document.getElementById('id');
 function onElemClick( event ) {
   console.log( event.type + ' just happened' );
 }
