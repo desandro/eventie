@@ -20,3 +20,7 @@ eventie is [Bower](https://github.com/twitter/bower) compatible
 ``` bash
 bower install desandro/eventie
 ```
+
+## IE 8
+
+eventie add support for `event.target` and [`.handleEvent` method](https://developer.mozilla.org/en-US/docs/DOM/EventListener#handleEvent()).

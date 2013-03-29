@@ -1,11 +1,11 @@
 /*!
- * eventie
+ * eventie v1.0.0
  * event binding helper
  *   eventie.bind( elem, 'click', myFn )
  *   eventie.unbind( elem, 'click', myFn )
  */
 
-/*jshint browser: true, undef: true */
+/*jshint browser: true, undef: true, unused: true */
 
 ( function( window ) {
 
@@ -23,10 +23,16 @@ if ( docElem.addEventListener ) {
   bind = function( obj, type, fn ) {
     obj[ type + fn ] = fn.handleEvent ?
       function() {
-        fn.handleEvent.call( fn, window.event );
+        var event = window.event;
+        // add event.target
+        event.target = event.target || event.srcElement;
+        fn.handleEvent.call( fn, event );
       } :
       function() {
-        fn.call( obj, window.event );
+        var event = window.event;
+        // add event.target
+        event.target = event.target || event.srcElement;
+        fn.call( obj, event );
       };
     obj.attachEvent( "on" + type, obj[ type + fn ] );
   };
