@@ -1,6 +1,6 @@
 # eventie - event binding helper
 
-Supported by IE8+ and good browsers.
+Makes dealing with events in IE8 bearable. Supported by IE8+ and good browsers.
 
 ``` js
 var elem = document.querySelector('#my-elem');
@@ -16,7 +16,7 @@ eventie.unbind( elem, 'click', onElemClick );
 
 ## Bower
 
-eventie is [Bower](https://github.com/twitter/bower) compatible
+eventie is a [Bower](http://bower.io) component.
 
 ``` bash
 bower install desandro/eventie
