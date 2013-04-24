@@ -1,11 +1,12 @@
 /*!
- * eventie v1.0.0
+ * eventie v1.0.1
  * event binding helper
  *   eventie.bind( elem, 'click', myFn )
  *   eventie.unbind( elem, 'click', myFn )
  */
 
 /*jshint browser: true, undef: true, unused: true */
+/*global define: false */
 
 ( function( window ) {
 
@@ -51,10 +52,18 @@ if ( docElem.removeEventListener ) {
   };
 }
 
-// publicize
-window.eventie = {
+var eventie = {
   bind: bind,
   unbind: unbind
 };
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( eventie );
+} else {
+  // browser global
+  window.eventie = eventie;
+}
 
 })( this );
