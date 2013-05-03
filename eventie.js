@@ -1,5 +1,5 @@
 /*!
- * eventie v1.0.1
+ * eventie v1.0.2
  * event binding helper
  *   eventie.bind( elem, 'click', myFn )
  *   eventie.unbind( elem, 'click', myFn )
