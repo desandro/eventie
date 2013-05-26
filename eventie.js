@@ -1,5 +1,5 @@
 /*!
- * eventie v1.0.2
+ * eventie v1.0.3
  * event binding helper
  *   eventie.bind( elem, 'click', myFn )
  *   eventie.unbind( elem, 'click', myFn )
@@ -48,7 +48,12 @@ if ( docElem.removeEventListener ) {
 } else if ( docElem.detachEvent ) {
   unbind = function( obj, type, fn ) {
     obj.detachEvent( "on" + type, obj[ type + fn ] );
-    delete obj[ type + fn ];
+    try {
+      delete obj[ type + fn ];
+    } catch ( err ) {
+      // can't delete window object properties
+      obj[ type + fn ] = undefined;
+    }
   };
 }
 

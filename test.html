@@ -47,6 +47,13 @@ window.onload = function() {
     eventie.unbind( document.body, 'click', onClick1 );  
   }, false );
 
+  function onResize() {
+    console.log('resize');
+  }
+
+  eventie.bind( window, 'resize', onResize );
+  eventie.unbind( window, 'resize', onResize );
+
 };
 
 })();

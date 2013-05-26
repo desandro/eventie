@@ -1,5 +1,6 @@
 {
   "name": "eventie",
-  "version": "1.0.2",
-  "main": "./eventie.js"
+  "version": "1.0.3",
+  "main": "eventie.js",
+  "description": "event binding helper"
 }
