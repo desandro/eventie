@@ -3,6 +3,7 @@
  * event binding helper
  *   eventie.bind( elem, 'click', myFn )
  *   eventie.unbind( elem, 'click', myFn )
+ * MIT license
  */
 
 /*jshint browser: true, undef: true, unused: true */

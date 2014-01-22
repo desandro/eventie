@@ -33,3 +33,7 @@ component install desandro/eventie
 ## IE 8
 
 eventie add support for `event.target` and [`.handleEvent` method](https://developer.mozilla.org/en-US/docs/DOM/EventListener#handleEvent(\)) for Internet Explorer 8.
+
+## MIT license
+
+eventie is released under the [MIT license](http://desandro.mit-license.org).
