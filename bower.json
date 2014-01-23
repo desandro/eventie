@@ -2,5 +2,9 @@
   "name": "eventie",
   "version": "1.0.4",
   "main": "eventie.js",
-  "description": "event binding helper"
+  "description": "event binding helper",
+  "ignore": [
+    "component.json",
+    "test"
+  ]
 }
