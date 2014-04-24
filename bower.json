@@ -5,6 +5,22 @@
   "description": "event binding helper",
   "ignore": [
     "component.json",
-    "test"
-  ]
+    "test.html",
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "homepage": "https://github.com/desandro/eventie",
+  "authors": [
+    "David DeSandro"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "event"
+  ],
+  "license": "MIT"
 }
