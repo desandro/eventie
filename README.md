@@ -20,7 +20,7 @@ Download [eventie.js](eventie.js)
 
 Install with [Bower :bird:](http://bower.io) `bower install eventie`
 
-Install with npm :truck: `npm install eventie`
+Install with [npm :truck:](https://www.npmjs.org/) `npm install eventie`
 
 Install with [Component :nut_and_bolt:](https://github.com/component/component) `component install desandro/eventie`
 
