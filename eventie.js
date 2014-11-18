@@ -9,7 +9,7 @@
 /*jshint browser: true, undef: true, unused: true */
 /*global define: false, module: false */
 
-( function( window ) {
+( function() {
 
 'use strict';
 
@@ -79,4 +79,4 @@ if ( typeof define === 'function' && define.amd ) {
   window.eventie = eventie;
 }
 
-})( this );
+})();
