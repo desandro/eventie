@@ -19,5 +19,8 @@
     "DOM",
     "event"
   ],
-  "author": "David DeSandro"
+  "author": "David DeSandro",
+  "spm": {
+    "main": "eventie.js"
+  }
 }

@@ -22,6 +22,8 @@ Install with [Bower :bird:](http://bower.io) `bower install eventie`
 
 Install with npm :truck: `npm install eventie`
 
+Install with [spm](http://spmjs.io/package/eventie) [![](http://spmjs.io/badge/eventie)](http://spmjs.io/package/eventie) `spm install eventie`
+
 Install with [Component :nut_and_bolt:](https://github.com/component/component) `component install desandro/eventie`
 
 ## IE 8
