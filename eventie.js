@@ -79,4 +79,4 @@ if ( typeof define === 'function' && define.amd ) {
   window.eventie = eventie;
 }
 
-})( this );
+})( window );
