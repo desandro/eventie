@@ -13,6 +13,10 @@
 
 'use strict';
 
+if ( !window.document ) {
+    return;
+}
+
 var docElem = document.documentElement;
 
 var bind = function() {};
@@ -79,4 +83,4 @@ if ( typeof define === 'function' && define.amd ) {
   window.eventie = eventie;
 }
 
-})( window );
+})( typeof window !== "undefined" ? window : this );
