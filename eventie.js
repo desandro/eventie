@@ -25,11 +25,11 @@ function getIEEvent( obj ) {
 }
 
 if ( docElem.addEventListener ) {
-  bind = function( obj, type, fn ) {
-    obj.addEventListener( type, fn, false );
+  bind = function( obj, type, fn, useCapture) {
+    obj.addEventListener( type, fn, !!useCapture );
   };
 } else if ( docElem.attachEvent ) {
-  bind = function( obj, type, fn ) {
+  bind = function( obj, type, fn, useCapture ) {
     obj[ type + fn ] = fn.handleEvent ?
       function() {
         var event = getIEEvent( obj );
@@ -39,19 +39,19 @@ if ( docElem.addEventListener ) {
         var event = getIEEvent( obj );
         fn.call( obj, event );
       };
-    obj.attachEvent( "on" + type, obj[ type + fn ] );
+    obj.attachEvent( "on" + type, obj[ type + fn ], !!useCapture );
   };
 }
 
 var unbind = function() {};
 
 if ( docElem.removeEventListener ) {
-  unbind = function( obj, type, fn ) {
-    obj.removeEventListener( type, fn, false );
+  unbind = function( obj, type, fn, useCapture ) {
+    obj.removeEventListener( type, fn, !!useCapture );
   };
 } else if ( docElem.detachEvent ) {
-  unbind = function( obj, type, fn ) {
-    obj.detachEvent( "on" + type, obj[ type + fn ] );
+  unbind = function( obj, type, fn, useCapture ) {
+    obj.detachEvent( "on" + type, obj[ type + fn ], !!useCapture );
     try {
       delete obj[ type + fn ];
     } catch ( err ) {
